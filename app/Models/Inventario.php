@@ -6,14 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inventario extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'fecha_entrada',
-        'stock'
+        'stock',
     ];
-    public function asistentes(){
+
+    public function asistentes()
+    {
         return $this->hasMany(Asistente::class);
     }
-    public function utensilios(){
+
+    public function utensilios()
+    {
         return $this->hasMany(Utensilio::class);
     }
 }

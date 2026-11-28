@@ -6,19 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pastor extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'nombre',
         'apellido',
         'telefono',
-        'contraseña'
+        'contraseña',
     ];
-    public function tesoreros(){
+
+    public function tesoreros()
+    {
         return $this->hasMany(Tesorero::class);
     }
-    public function asistencia_liders(){
-        return $this->hasMany(Asistencia_lider::class);
+
+    public function asistencia_liders()
+    {
+        return $this->hasMany(AsistenciaLider::class);
     }
-    public function liders(){
+
+    public function liders()
+    {
         return $this->hasMany(Lider::class);
     }
 }

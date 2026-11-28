@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('registro_familias', function (Blueprint $table) {
             $table->id();
-             $table->foreignId('asistente_id')
+            $table->foreignId('asistente_id')
                 ->constrained('asistentes')
                 ->onDelete('cascade');
             $table->date('fecha_registro');

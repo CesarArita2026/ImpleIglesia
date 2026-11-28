@@ -6,17 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tesorero extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'nombre',
         'apellido',
         'telefono',
         'contraseña',
-        'pastor_id'
+        'pastor_id',
     ];
-    public function pastor(){
-        return $this->belongs(Pastor::class);
+
+    public function pastor()
+    {
+        return $this->belongsTo(Pastor::class);
     }
-    public function aportes(){
+
+    public function aportes()
+    {
         return $this->hasMany(Aporte::class);
     }
 }

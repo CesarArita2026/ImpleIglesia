@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Utensilio extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'inventario_id',
         'nombre',
         'categoria',
-        'descripcion'
+        'descripcion',
     ];
-    public function inventario(){
-        return $this->belongs(Inventario::class);
+
+    public function inventario()
+    {
+        return $this->belongsTo(Inventario::class);
     }
 }

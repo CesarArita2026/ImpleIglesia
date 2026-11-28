@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Billete extends Model
 {
-    protected $fillable=[
-        'nombre'
+    protected $fillable = [
+        'nombre',
     ];
-    public function tipo_billetes(){
-        return $this->hasMany(Tipo_billete::class);
+
+    public function tipo_billetes()
+    {
+        return $this->hasMany(TipoBillete::class);
     }
 }

@@ -6,15 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class RegistroFamilia extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'asistente_id',
         'fecha_registro',
-        'apellido'
+        'apellido',
     ];
-    public function asistente(){
-        return $this->belongs(Asistente::class);
+
+    public function asistente()
+    {
+        return $this->belongsTo(Asistente::class);
     }
-    public function aportes(){
+
+    public function aportes()
+    {
         return $this->hasMany(Aporte::class);
     }
 }

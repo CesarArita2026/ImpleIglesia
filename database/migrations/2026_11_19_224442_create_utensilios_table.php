@@ -18,7 +18,7 @@ return new class extends Migration
                 ->onDelete('cascade');
             $table->string('nombre');
             $table->string('categoria');
-            $table->string('descripcion',2000);
+            $table->string('descripcion', 2000);
             $table->timestamps();
         });
     }
